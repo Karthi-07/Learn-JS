@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>
+            Working with Dates 
+        </title>
+    </head>
+    <body>
+         <script>
+
+            // date is bulit in object that available in javascirpt
+            // date stores both date and time and day
+            let d = new Date();
+            console.log(d);
+           //methods in Date 
+              // we can access only reference variable of the Date class only
+            // 1. getDate() -> return the date
+            //    2. getDay() -> return the day(0-6) 0-sunday like wise
+            //    3. getMonth() -> return the month (0-11) 0-Jan,1-feb..like wise
+            //    4. getYear() -> return the year
+            //    5. getHours() -> return the hours
+            //    6. getMinutes() ->return the minutes
+            //    7. getSeconds() -> return the seconds
+            //    8. getMilliSeconds() -> return the milliseconds
+      
+            console.log("getDate() :- "+d.getDate());
+            console.log("getDay() "+d.getDay());
+            console.log("getMonth() "+d.getMonth());
+            console.log("getYear() "+d.getYear());
+            console.log("getHours() "+d.getHours());
+            console.log("getMinutes() "+d.getMinutes());
+            console.log("getSeconds() :- "+d.getSeconds());
+            console.log("getMilliSeconds() :- "+d.getMilliseconds());
+
+            // to functions 
+             // toString() --> excatly equls to the Date() format works
+            // toDateString() ->  its returns day month and date as a string format
+            // toTimeString() -> its returns time as a string format
+            // toIOSString() -->  its returns ISO standard format (time)
+            // toJSON() -> JSON adapt the iso standard format for date and time
+
+            console.log("\n\n");
+            console.log("toString() :- "+d.toString());
+            console.log("toDateString() :- "+d.toDateString());
+            console.log("toTimeString() :- "+d.toTimeString());
+            console.log("toIOSString() "+d.toISOString());
+            console.log("toJSON() "+d.toJSON());
+
+            // toLocaleString() -> its helps to specify the date like 
+               // syntax --> toLocaleString('Language-country') eg :- "en-US"
+                    // no arguments its default language as english and country as uniated states
+             console.log("toLocaleString() :- "+d.toLocaleString('en-GB'));
+           // print the date as a standard format
+
+             let d1 = new Date();
+             console.log(d1);
+             stand(d1);
+            function stand(d1)
+            {
+                let se = {
+                year:"numeric",
+                month:"short",
+                day:"2-digit",
+                hour:"2-digit",
+                minute:"2-digit",
+                second:"2-digit",
+                timeZonename:"short"
+               };
+               console.log(d1.toLocaleString('en-US',se));
+            }
+          
+            stand(new Date('2021-03-27T21:45:17.396z'));  // its print the iso format
+            stand(new Date('2021-03-27T21:45:17.396+0530')); //if you want to print the time zone for india you can change 05hours30minutes instead of z
+            stand(new Date(2003,2,22,6,15,32,123)) //year,month,date,hour,minutes,seonds,milliseconds
+             //date is not defined its set first day of the month if the time is not defined its start the start time 12 and seconds and minutes as 00
+             stand(new Date(2003,2,22));
+
+
+
+             // modify the date,month,year,day,hour,minute... using set methods
+              // syntax ;- string.setmethodname(value);
+              // setMonth(),setFullYear(),setDate(),setHours(),setMinutes(),setMilliseconds(),setUTCMonth()....
+             let d4=new Date(2022,3,19);
+             console.log(d4);
+             d4.setMonth(2);
+             console.log("set method :- "+d4);
+
+             // getmethod is used to get a year ,month ,hours seperately when is use example if you caluate age that time birth year is only enough for calculating the age that time we use getmethod
+             // syntax :- string.getmethodname()
+              
+             console.log("get method :- "+d4.getFullYear());
+
+            // conversion string into date format (dd/mm/yy -> standard date format)
+
+            let d5 = "22/03/2003";
+            console.log(d5)
+            console.log("String converts into Date");
+            let d6=d5.split('/');
+            let d7=new Date(d6[2],d6[1]-1,d6[0]);
+            console.log(d7);
+            
+         </script>
+    </body>
+</html>

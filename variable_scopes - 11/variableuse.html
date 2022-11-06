@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Variable scopes
+        </title>
+    </head>
+    <body>
+        <script>
+         /* three types of variable 
+            (global,functional)-->traditional-->var keyword(not possible to define a block scope variable)
+               functional variable -> within a function,
+                global->rest of function variable
+            (block)-->ES6 version --> let,const (possible to define all the three types)
+            let -> if the varaible defind as a let keyword that works with in the code block{}
+
+            compare with var and let let is best for declaring variables
+       */
+
+       //var keyword (it may override any existing declarations) 
+
+       var number=1; //global vairbale
+       function print(n1)
+       {
+         var n=1;  //functional variable 
+          var total=n+n1;
+          return total;   
+       }
+       var c=print(number);
+       console.log(c);
+
+       // let keyword (unique) 
+
+       let a=1;
+       if(a==1)
+       {
+        let b=3;
+        console.log('Inside if B '+b);
+       }
+       //console.log('outside if B'+b);  b is not printed because b is defined inside if and is only works inside the if 
+       console.log('Outside if A '+a);
+
+
+       // const keyword
+        const b=2;
+        //if(b==2) b=5;  once we define a variable as const we cant change the value of that variable
+        console.log(b); 
+             
+       </script>
+    </body>
+</html>

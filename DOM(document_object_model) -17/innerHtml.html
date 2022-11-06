@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>InnerHTML method </title>
+    </head>
+    <body>
+         <p id="kar">Karthikeyan</p>
+         <script>
+            //innerHTML method is used to read the text value available within the tags and also possible to modify the using the html tag also 
+            let c = document.getElementById("kar");
+            console.log(c.innerText);
+            kar.innerText="<i>Mahi<i>";
+            // in innerText method we only change the text content but innerHTML property we can modify the elements using the html tag is also possible
+            console.log(c.innerHTML);
+            kar.innerHTML="<i>Mahi<i>";
+         </script>
+    </body>
+</html>

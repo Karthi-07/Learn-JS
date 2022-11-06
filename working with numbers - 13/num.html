@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Numbers in Javascript
+        </title>
+    </head>
+    <body>
+        <script>
+        // undercores are ignored we can use at to represent long numbers
+        console.log(10000000000);
+        console.log("Underscores :",1_000_000_000);
+        //numbers can also explain a exponentional form
+        console.log("Exponential :",1e10);
+        /* Standrad position numeral system
+           binary -> prefix with 0b
+           octal -> prefix with 0o
+           hexadecimal -> prefix with 0x
+        */
+        console.log(0b1111111);
+        console.log(0o377);
+        console.log(0xff);
+
+        /* Decimal to Integer convertor 
+          floor ->  it doesnt incremnent the integer the value
+          ceil -> default increment the integer no like floor
+          round-> if the point value is greater than or equal to 5 its increase the value by one in the integer value
+          bulit in class math gave these three methods also(floor,ceil,round)
+          */
+          console.log("Floor() :- ",Math.floor(7.9));
+          console.log("Ceil() :- ",Math.ceil(7.1));
+          console.log("round() :- ",Math.round(7.5));
+          
+          // isNaN -> its Not an Number
+          // isNaN(string) string pass a input
+          // bulit in funciton isNaN(text) is used to find whether it is number is not if its a number return false else return true         
+           console.log("isNAN() :- ",isNaN('2@'));
+          console.log("isNAN() :- ",isNaN('12'));
+       </script>
+    </body>
+</html>

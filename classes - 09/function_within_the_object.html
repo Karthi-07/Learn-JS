@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           function within the object
+        </title>
+    </head>
+    <body>
+        <script>
+              var p=[
+                {  fname:'karthi',lname:'keyan',age:19,gender:'M',
+                   getfullname:function()  //declare the function that within the object 
+                    { 
+                      var total = this.gender=='M'?'Mr. ':'Ms. ';
+                      var fullname = total+this.fname+' '+this.lname;
+                     return fullname;
+                    }
+               },
+                {fname:'kiran',lname:'kumar',age:19,gender:'F'},
+                {fname:'jeevan',lname:'siddharth',age:19,gender:'M'}
+            ];
+        //calling the object that is inside the function 
+        console.log(p[0].getfullname());
+
+        </script>
+    </body>
+</html>

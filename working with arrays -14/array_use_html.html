@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Array use Html</title>
+    </head>
+    <body>
+        <script>
+            // frequently used array methods
+            
+            // pop() -> removes the last element of the array
+            let array=[1,2,3,4,5,6];
+            let c=array.pop();
+            console.log(c);
+            console.log(array+"\n");
+            
+            // indexOf() -> if the element is present it returns the index of the element else it return -1;
+           // includes() -> if the element is present it returns true else it returns false
+
+           console.log("IndexOf() :- "+array.indexOf(5));
+           console.log("IndexOf() :- "+array.indexOf(9));
+           console.log("Includes() :- "+array.includes(4));
+           console.log("Includes() :- "+array.includes(0));
+
+           // forEach() 
+              // internally runs the for loop on the array
+              // calls the arrow function of each array item
+              // the arrow function is called with array item as parameter
+             // syntax : - array_name.forEach(varaible_name => console.log(variable_name));
+
+           let array1 = [
+                { id : 1 , name : "Karthi"},
+                { id : 2 , name : "Keyan"},
+                { id : 3 , name : "Dinesh"},
+                { id : 4 , name : "Karthi"}
+            ];
+            for(let a of array1)
+            {
+                console.log(a.name);
+            }
+
+            array1.forEach(a => console.log(a.name));
+            array1.forEach(a => console.log(a.id));
+
+
+          // find() -> its helps to find the element in that array if the element is present it returns the elements else it returns undefined
+          // it internally runs a for loop for each element that present in array
+          // syntax :- array_name.find(variable_name => condition);
+          for(let b of array1)
+          {
+            if(b.name=="Karthi")
+            {
+                console.log(b);
+                break;
+            }
+          }
+          
+          console.log(array1.find(c => c.name=="Dinesh"));
+          console.log(array1.find(c2 => c2.name=="Pangu"));
+          
+// note :- find() function only return the first matches -  filter() function return all the matches
+          // filter() -> same as find() function but it returns all the matches 
+          // syntax :- array_name.filter(variable_name => condition)
+        
+          console.log(array1.filter(c3 => c3.name=="Karthi"));
+          console.log(array1.filter(c4 => c4.id <= 2));
+
+          //map() -> to change or modify the elements and store into another array we can use map function
+          // this function doesn't modify the orginal array 
+          // syntax :- array_name.map(variable_name => modification_syntax(eg:- 2*n-1))
+          
+          let num = [1,2,3,4,5,6,7,8,9,10];
+          console.log("Numbers :- "+num);
+          let num1=num.map(m => 2*m-1);
+          console.log("After modify :- "+num1);
+          console.log("Numbers :- "+num);
+          
+          // join () -> whatever seperator need we just call the join function 
+          // syntax -> array_name.join("seperator");
+
+          let names=["karthi","keyan","dinesh","babu","tamil"];
+          console.log(names.join(" | "));
+
+          // reduce() -> reduce the size of the array into a single value like if we go for sum of the array elements 
+          // we use for loop but in such a case we can use reduce function 
+           // syntax -> array_name.reduce(variable name => condition); 
+
+           console.log(num.reduce((sum,item) => sum+item));
+
+            //sort() -> function help to sort the array elements(like a to z,1 to 100..)
+             // its case sensitive(a<K) so K print first after that a prints 
+             // modify the order of the orginal array
+            // syntax :- array_name.sort(); 
+
+            names.sort();
+            console.log(names.sort()+" ");
+           
+            let x2=[1,2,12,4,13,6];
+            x2.sort();
+            console.log(x2+" ");
+
+            // compare
+            // if the compare function returns a positive number then do swaping 
+            // if the compare funciton returns a negative number then no swaping 
+            // if the compare function returns zero then the numbers are equal
+            x2.sort(compare);
+            function compare(a,b)
+            {
+                //console.log("Compare() :- "+a,b);
+                // if(a>b) return 1;
+                // if(a<b) return -1;
+                // if(a==b) return 0;
+
+                // OR 
+
+                return a-b;
+            }
+            console.log(x2);
+        
+               //or using Arrow function
+                  x2.sort((a,b)=> a-b);
+
+
+
+
+           // sorting the objects 
+             // in javascript we can do all the comparision operators on string like('>','<','!=',...)
+
+             var stud = [ {id: 103,name: "Karthi"},
+                          {id: 101,name: "Keyan"},
+                           {id: 102,name:"Dinesh"}
+                        ];
+
+            function displaystud(stud)
+            {
+                console.log("\n\n");
+                for(let stu of stud)
+                {
+                    console.log(stu);
+                }
+            }
+             
+            stud.sort((a,b)=>(a.id - b.id));
+            displaystud(stud);
+            stud.sort((a,b) => (a.name>b.name?1:-1));
+            displaystud(stud);
+        </script>
+    </body>
+</html>

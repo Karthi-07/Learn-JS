@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .aler{font-size: medium;color: red; display:none;}
+        </style>
+
+        <title>Airlines Infant Policy</title>
+    </head>
+    <body>
+ <!-- in this website once i click the button then only i see the if its infant,adult,men -->
+        <!-- <h2>Airlines Infant Policy</h2>
+        Age : <input type="text" id="age">
+        <br>
+        <input type="submit" name="submit" id="sub">
+        <br>
+        <br>
+        <h3 id="res"></h3>
+        <script>
+         let ab = document.getElementById("age");
+         let bc = document.getElementById("sub");
+         bc.addEventListener("click",function fun()
+         {
+            if(parseInt(ab.value)<5)
+                res.innerText= "Infant";
+            else if(parseInt(ab.value)>5 && parseInt(ab.value)<19)
+                 res.innerText= "Adult";
+            else
+                res.innerText="Men";
+         }
+         )
+        </script> -->
+<!-- After enchancing the same website when i type only i can see the output-->
+
+<!-- <h2>Airlines Infant Policy</h2>
+        Age : <input type="text" id="age">
+        <br>
+        <br>
+        <h3 id="res"></h3>
+        <script>
+         let ab = document.getElementById("age");
+         ab.addEventListener("keyup",function fun()
+         {
+            if(parseInt(ab.value)<5)
+                res.innerText= "Infant";
+            else if(parseInt(ab.value)>5 && parseInt(ab.value)<19)
+                 res.innerText= "Adult";
+            else if(parseInt(ab.value)>19 && parseInt(ab.value)<=99)
+                res.innerText="Men";
+         }
+         ) -->
+
+<!-- above code we have some issue (if we type 1 it shown as Infant after we removing the 1 but the infant is shown the next time the issue will be overcome)
+        </script> -->
+
+
+        <!-- In javascirpt empty string is considered as 0
+        <script>
+              console.log(""==0);
+        </script>
+        -->
+<!-- <h2>Airlines Infant Policy</h2>
+        Age : <input type="text" id="age">
+        <br>
+        <br>
+        <h3 id="res"></h3>
+        <script>
+         let ab = document.getElementById("age");
+         ab.addEventListener("keyup",function fun()
+         {
+            if(ab.value==0) 
+                 res.innerText="";
+            if(parseInt(ab.value)<5)
+                res.innerText= "Infant";
+            else if(parseInt(ab.value)>5 && parseInt(ab.value)<19)
+                 res.innerText= "Adult";
+            else if(parseInt(ab.value)>19 && parseInt(ab.value)<=99)
+                res.innerText="Men";
+         }
+         )
+        </script>   -->
+<!-- In above code we have anther important issue validation issue if we give 1a it shows infant so we change the code
+if any alphabet typed will be shown an error message -->
+
+<!-- isNaN() method return true if it is not a number 
+<script>
+    console.log(isNaN(1));
+</script>
+-->
+
+<h2>Airlines Infant Policy</h2>
+        Age : <input type="text" id="age">
+        <br>
+        <br>
+        <div class="aler" id="msg">Age should be a number</div>
+        <h3 id="res"></h3>
+        <script>
+         let ab = document.getElementById("age");
+         let bc = document.getElementById("msg");
+         console.log(bc);
+         ab.addEventListener("keyup",function fun()
+         {  
+            bc.style.display="none";
+            res.innerText="";
+            if(ab.value=="") 
+            {
+                return;
+            }
+            if(isNaN(ab.value))
+            {
+                 bc.style.display="block";
+                 return;
+            }
+            if(ab.value<5)
+                res.innerText= "Infant";
+            else if(parseInt(ab.value)>5 && parseInt(ab.value)<19)
+                 res.innerText= "Adult";
+            else if(parseInt(ab.value)>19 && parseInt(ab.value)<=99)
+                res.innerText="Men";
+         }
+         );
+        </script>  
+    </body>
+</html>

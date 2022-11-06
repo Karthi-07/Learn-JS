@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>String Use Html</title>
+    </head>
+    <body>
+        <script>
+            // Use of back slash character(\)
+            // javascirpt is unicode language i can print the symbols also
+            // unicode syntax --> \u{respective_unicode};
+            console.log("\"Hey\" I am Karthi" );
+            console.log("\'A\' I am karthi");
+            console.log("\u{1F60E}");
+            
+            //string is an object
+            console.log("Karthi".length);
+            var c="Karthi keyan";
+            console.log(c.length);
+
+            //specific characte from an string 
+            //using charAt method syntac :- charAt(index)
+            //arr directly given the index syntax:- string_name[index]
+            console.log("Karthi"[3]);
+            console.log("Karthi".charAt(5));
+
+            //string is immutable(unchangeable)
+            var c="karthi";
+            console.log(c);
+            c[2]='K';
+            console.log(c); // there is no modification in the stirng(immutable)
+            
+            // toUpperCase() ->   converts string into uppercase  syntax :- string_name.toUpperCase();
+            // toLowerCase() -> converts string into lowercase    syntax :- string_name.toLowerCase();
+            var c ="Karthi";
+            console.log("Upper case :- "+c.toUpperCase());
+            console.log("Lower Case :- "+c.toLowerCase());
+          
+            //indexof("substring") it returns the substring start position on the string if it not present return -1
+            //includes() -> it returns true if the string is present it returns false if the string is not present
+            //startsWith() -> it returns true if the string is present at start it returns false if the string is not present
+            //endswith() -> it returns true if the string is present at end it returns false if the string is not present
+            //syntax of above methos :- string_name.method_name(); 
+             
+            var c="karthi";
+            console.log(c.indexOf('ar'));
+            console.log(c.includes("aar"));
+            console.log(c.startsWith('ka'));
+            console.log(c.endsWith('ka'));
+
+            // extract a stirng into substring 
+             // 1. substr() -> syntax substr(start_index,length); length is optional 
+             // 2. substring() -> syntax substring(start_index,end_index); last_index is optional
+             // 3. slice() -> syntac slice(start_index,end_index); last_index is optional 
+             // slice & substring extract the substirng previous position of end index
+             // note : - if starting index is greater than the end index the substring makes a revers traversal but slice doesn't    
+             var c="karthikeyan";
+             console.log("Substr() :- "+c.substr(3,5));
+             console.log("Substring() :- "+c.substring(3,5));
+             console.log("Slice():-"+c.slice(3,5));
+             console.log("Substring() :- "+c.substring(5,3));
+             console.log("Slice():-"+c.slice(5,3));
+        </script>
+    </body>
+</html>

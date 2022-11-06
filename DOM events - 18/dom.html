@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>DOM Using HTML</title>
+    </head>
+    <body>
+      
+        <!-- <input type="submit" name="submit" onclick="console.log('buttom clicked')">  -->
+        <!-- onclick using function -->
+         <br>
+         <input type="submit" name="submit" onclick="c1()">
+         <script>
+            function c1(){
+                console.log('button clicked by function');
+             }
+        </script>
+<br>
+      <input type="submit" name="submit" id="sub">
+        <script>
+            let kar = document.getElementById("sub");
+            kar.onclick=c;
+            function c()
+            {
+                console.log("karthi click the button");
+            }
+        </script>
+<br>
+<!-- Getting the value from the user (input text field) -->
+    <input type="text" id="name">
+    <input type="submit" id ="s1">
+    <script>
+        let ab = document.getElementById("name");
+        let bc = document.getElementById("s1");     
+        // element.addEventListener(event,function) -> its mainly used identify the button that to be clicked 
+    
+    // "keyup" is used to verify the every single letter that should be pressed by keyboard
+             // "keyup" -> real time example Google search, currency conversion online 
+    // "click" is used to verify the after the button should be clicked
+
+    //  ab.addEventListener("keyup",
+    //  function func()
+    //  {
+    //     console.log(ab.value);
+    //  })
+
+     bc.addEventListener("click",function funcr(){
+        console.log(ab.value);
+     })
+
+    </script>
+    </body>
+</html>

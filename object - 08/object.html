@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            object
+        </title>
+    </head>
+    <body>
+         <script>
+             // var object_name = { property_name :"property_value",...};
+             var p={
+                 fname:"Karthi",
+                 lname:"keyan",
+                 gender:
+                 {
+                     short:'M',
+                     long:'Male'
+                 }
+             };
+             const kar =new Object();
+             kar.name='Karthi';
+             kar.age=19;
+             kar.phone=9787183601;
+             console.log(kar.name);
+             console.log(p);
+             // changing the variables in object 
+             kar.name='keyan';
+             console.log(kar.name);
+             //access object 
+             console.log(p.fname);
+             console.log(p.gender);
+             console.log(p.gender.long); //defining object with another object 
+        </script>
+    </body>
+</html>

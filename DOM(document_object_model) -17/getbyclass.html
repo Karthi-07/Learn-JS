@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>classname using style</title>
+    <style>
+        .ck{
+            color:red;
+            font-size: larger;
+        }
+        .kr{
+            color:red;
+        }
+    </style>
+    </head>
+    <body>
+         <!-- if id -> getElementById("id_name");
+         if class -> getElementsByClassName("class_name"); -->
+        <p class="ck kr" >Karthikeyan</p>
+        <p class="kr">Dinesh</p>
+        <p class="kr">Tamil</p>
+        <p>Borjio</p>
+        <script>
+            //getElementsByClassName() -> method returns object of the HTML collection
+           let ks = document.getElementsByClassName("kr");
+           for(let c=0;c<ks.length;c++)
+           {
+             console.log(ks[c].innerText);
+           }
+        </script>
+    </body>
+</html>

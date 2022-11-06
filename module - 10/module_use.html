@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Module use javascript
+        </title>
+    </head>
+    <body>
+      <!-- <script src="/Javascript/module/student.js">
+      </script>
+      <script src="/Javascript/module/gender.js">
+      </script> -->
+      <script type="module">
+       //import the module 
+        import {Gender} from './gender.js';
+        import {Student} from './student.js';
+         var m1=new Gender('Karthi','M');
+         var m2=new Gender('laxmi','M');
+         console.log(m1.name,m1.gen);
+         console.log(m2.name,m2.gen);
+         var s1=new Student('karthi','keyan',19,'M');
+         var s2=new Student('kiran','kumar',20,'M');
+         console.log(s1.fname,s1.lname,s1.age,s1.gender);
+         console.log(s2.fname,s2.lname,s2.age,s2.gender);
+         console.log(s1.getfullname());
+         console.log(s2.getfullname());
+      </script>
+    </body>
+</html>

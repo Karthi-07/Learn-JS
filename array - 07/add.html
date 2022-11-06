@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            push method
+        </title>
+    </head>
+    <body>
+         <script>
+             var heights=[100,200,300,400];
+             var total=0;
+             var cars=['bmw','rolls royalce','audi'];
+             heights.push(500);
+             console.log(heights);
+             for(var c=0;c<=4;c++)
+             {
+                 console.log(heights[c]);
+                 total+=heights[c];
+             }
+             console.log(total);
+             for(var i=0;heights.length;i++)
+             {
+                 console.log(heights[i]);
+             }
+             //for([variable-definition] of [array-name])
+             for(var car of cars)
+             {
+                    console.log(car);
+             }
+         </script>
+    </body>
+</html>

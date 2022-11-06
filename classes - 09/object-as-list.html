@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript objects</title>
+    </head>
+    <body>
+       <!-- Java script class,module is introduced by ES6 OR ECMASCRIPT 2015-->
+       <!-- we created single object for each x,y,z and store the objects into single object(as a list p)-->
+       <script>
+            var x = {fname:'karthi',lname:'keyan',age:19,gender:'M'};
+            var y = {fname:'kiran',lname:'kumar',age:19,gender:'F'};
+            var z = {fname:'jeevan',lname:'siddharth',age:19,gender:'M'}; 
+            var p = [x,y,z];
+          for(var i=0;i<3;i++){
+           console.log(getfullname(p[i]));
+          } 
+            function getfullname(x)
+           {
+              var total = x.gender=='M'?'Mr. ':'Ms. ';
+              var fullname = total+x.fname+' '+x.lname;
+              return fullname;
+           }
+       </script>
+       <!-- this method or that method -->
+       <script>
+        var p=[{fname:'karthi',lname:'keyan',age:19,gender:'M'},{fname:'kiran',lname:'kumar',age:19,gender:'F'},
+        {fname:'jeevan',lname:'siddharth',age:19,gender:'M'}];
+        for(var i=0;i<3;i++){
+           console.log(getfullname(p[i]));
+          } 
+          function getfullname(x)
+           {
+               var total = x.gender=='M'?'Mr. ':'Ms. ';
+               var fullname = total+x.fname+' '+x.lname;
+               return fullname;
+           }
+       </script>
+    </body>
+</html>

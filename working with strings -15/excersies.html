@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Excersies on String </title>
+    </head>
+    <body>
+       <script>
+
+        // print the character form the string line by line
+          var c="karthikeyan";
+          for(let i=0;i<c.length;i++)
+          {
+            console.log(c[i]+"\n");
+          }
+
+        // in a string count the no of times character 'e' is present
+        var count=0; 
+        for(let i=0;i<c.length;i++)
+         {
+            if(c[i]=='e' || c[i]=='E'){
+                count++;
+            }
+         }
+         console.log("Count : "+count);
+
+        // website address is secure or not secure using function 
+
+        var c1="https://karthikeyan";
+        var c2="karthikeyan";
+        function displaysecure(n)
+        {
+          if(n.startsWith('https://')) {
+              console.log("Secure");
+         }
+         else{
+            console.log("not secure");
+         }
+        }
+        displaysecure(c1);
+        displaysecure(c2);
+
+        // find the index of the character -> '|'
+        var fr="Karthi|dinesh|tamil|reno";
+         console.log(fr.indexOf('|'));
+         console.log(fr.indexOf('|',(fr.indexOf('|'))+1)); //string.indexOf(searchterm,string.indexOf("string")+1;
+       
+       
+         // extract domain name from website
+         
+         var link1="https://en.wikipidia.org/wiki/Main_Page";
+         var link2="https://developer.mozilla.org/docs/Web";
+        
+         console.log(link1);
+         console.log("Domain name :- "+getdomain(link1));
+         console.log(link2);
+         console.log("Domain name :- "+getdomain(link2));
+
+         function getdomain(link3)
+         {
+           return link3.substring(link3.indexOf("/")+2,link3.indexOf("g/")+1);
+         }
+
+         //split the sentence
+
+         var c="Karthi is a Cricketer";
+         var c2=c.split(" ");
+         console.log(c2.join("\n"));  //join() -> method is used to add the strings that splits with the keyword split()
+                                     // string.split(string),string.join(string);
+
+       </script>
+    </body>
+</html>
