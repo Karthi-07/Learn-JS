@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .stud{
+             padding: 0.75rem;
+             border: 0.05rem solid #ddd;
+             width: 14.55rem;
+             display: none;
+             cursor: pointer;
+            }
+            .stud:hover{
+                background-color:bisque;
+            }
+        </style>
+       <title>Case study 2 - Student </title>
+    </head>
+    <body>
+        <h1 id="head">ABC School</h1>
+        <label for="search">Student Name</label>
+        <br><br>
+        <input type="text" id="search" placeholder="student name">
+        <div class="stud">KarthiKeyan</div>
+        <div class="stud">Karthi</div>
+        <div class="stud">Keyan</div>
+        <div class="stud">Kirankumar</div>
+        <div class="stud">kumar</div>
+        <div class="stud">Kiran</div>
+        <div class="stud">JeevanSiddharth</div>
+        <div class="stud">Siddharth</div>
+        <div class="stud">Jeevan</div>
+        <div class="stud">aathiganesh</div>
+        <div class="stud">ganesh</div>
+        <div class="stud">aathi</div>
+        <div class="stud">Mohmmed mahir</div>
+        <div class="stud">mahir</div>
+        <div class="stud">Mohmmed</div>
+        <div class="stud">subash</div>
+        <div class="stud">harish</div>
+        <div class="stud">ram</div>
+        <div class="stud">anand</div>
+        <script>
+            let s = document.getElementById("search");
+            let c = document.getElementsByClassName("stud");
+//            console.log(s);  // -> we check 
+  //          console.log(c);  // -> check process all the div are comes
+
+
+  // check the student name to be clicked
+  for(let i=0;i<c.length;i++)
+  {
+     c[i].addEventListener("click",func)
+  } 
+  function func(event)
+  {
+    //console.log(event.target.innerText);  // event (Object) -> target (HTML tag) -> innerText(returns the)
+    search.value=event.target.innerText; // that is used to fit the clicked student name into the text box(use via id)
+    for(let i=0;i<c.length;i++){
+        c[i].style.display = "none";
+    }
+
+  }
+
+            s.addEventListener("keyup",function()
+            {
+                for(let i=0;i<c.length;i++)
+                {
+                  /* let temp = c[i].innerText;
+                   if(temp.includes(s.value))
+                      c[i].style.display="block";
+                   else
+                      c[i].style.display="none";
+                    */  // -> in this above code we search the user entered name(case insensitive)
+  
+                   let temp = c[i].innerText.toUpperCase();
+                   if(temp.includes(s.value.toUpperCase()) && s.value!="")
+                   {
+                       c[i].style.display = "block";
+                   }
+                   else{
+                    c[i].style.display ="none";
+                   }
+                   
+                } 
+            });   
+
+
+        </script>
+    </body>
+</html>
