@@ -1,64 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>classes in Javascript</title>
-    </head>
-    <body>
-        <!-- calss name should be in upper case like if class name is Apple(A should be uppercase),KarthiKeyan(K,K is should be uppercase)-->
-        <script>
-           class Person{
-            constructor(name,age)
-            {
-                this.name=name;
-                this.age=age;
-            }
-           }
-           var p=new Person('santha',19); //initialize the object for class person
-         console.log(p);
-        </script>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>classes in Javascript</title>
+        </head>
+        <body>
+            <!-- calss name should be in upper case like if class name is Apple(A should be uppercase),KarthiKeyan(K,K is should be uppercase)-->
+        
+        <script type="module">
+            /* while we importing the javascript classes form the other js file 
+            1.the syntax is import {classname} form 'path' 
+            2.in the script tag we must mention the type as module <script type="module">
+            3.in the javascript file the class name in the syntax of "export class classname{}"
+            */
+            
+            import  { Person } from './class_js_use.js';
+            
+            var p=new Person('santha',19); //initialize the object for class person
+            console.log(p.name+" "+p.age);
+            </script>
+        
         <!-- function with in the class -->
-        <script>
-         class Person1{
-            constructor(fname,lname,age)
-            {
-                this.fname=fname;
-                this.lname=lname;
-                this.age=age;
-            }
-            n()
-            {
-                var c=this.fname+' '+this.lname; //inside class we access the value using this keyword
-                return c;
-            }
-           }
-           var k=new Person1('santha','kumar',20);
-           console.log(k);
-           console.log(k.n());
+        
+        <script type="module">
+        
+        import { Person1 } from './person1.js';
+
+            var k=new Person1('santha','kumar',20);
+            console.log(k.fname+" "+k.lname+" "+k.age);
+            console.log(k.n());
+        
         </script>
+        
         <!-- creating multiple objects for class -->
-        <script>
-           class Person2{
-            constructor(fname,lname,age)
-            {
-                this.fname=fname;
-                this.lname=lname;
-                this.age=age;
-            }
-            n()
-            {
-                var c=this.fname+' '+this.lname; 
-                return c;
-            }
-           }
-           var k1=new Person2('santha','kumar',20);
-           var k2=new Person2('aswin','kumar',20);
-           var k3=new Person2('kiran','kumar',20);
-           var kn=[k1,k2,k3];
-           console.log(kn[0].n());
-           console.log(kn[1].n());
-           console.log(kn[2].n());
+            <script type="module">
+            
+            import  {Person2} from './person2.js';
+
+            var k1=new Person2('santha','kumar',20);
+            var k2=new Person2('aswin','kumar',20);
+            var k3=new Person2('kiran','kumar',20);
+            var kn=[k1,k2,k3];
+            console.log(kn[0].n());
+            console.log(kn[1].n());
+            console.log(kn[2].n());
+        
         </script>
 
 
-    </body>
-</html>
+        </body>
+    </html>
